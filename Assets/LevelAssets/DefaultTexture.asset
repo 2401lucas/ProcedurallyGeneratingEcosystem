@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e115e8d54867fcd409dc7afd1d92629c, type: 3}
+  m_Name: DefaultTexture
+  m_EditorClassIdentifier: 
+  autoUpdate: 1
+  layers:
+  - texture: {fileID: 2800000, guid: ac70b2f161c05fd45b4ff7f27bdeadb8, type: 3}
+    tint: {r: 0, g: 0, b: 0.764151, a: 0}
+    tintStrength: 0
+    startHeight: 0
+    blendStrength: 0
+    textureScale: 4.5
+  - texture: {fileID: 2800000, guid: 73dbaffd7f2e92d418b36011a55d9582, type: 3}
+    tint: {r: 1, g: 0.69803923, b: 0.0627451, a: 0}
+    tintStrength: 0.83
+    startHeight: 0.005
+    blendStrength: 0
+    textureScale: 11.2
+  - texture: {fileID: 2800000, guid: f6acd9a55c149ea4aac3fe99f39e5360, type: 3}
+    tint: {r: 0.47636795, g: 0.5882353, b: 0, a: 0}
+    tintStrength: 0
+    startHeight: 0.045
+    blendStrength: 0.053
+    textureScale: 8.22
+  - texture: {fileID: 2800000, guid: d5b1d9e674277314fb0f6f9162cbae7a, type: 3}
+    tint: {r: 0.040239878, g: 0.13207549, b: 0, a: 0}
+    tintStrength: 0.3
+    startHeight: 0.145
+    blendStrength: 0.149
+    textureScale: 2.42
+  - texture: {fileID: 2800000, guid: 1b03edd9ec79dae4890ce3deeae2ab1d, type: 3}
+    tint: {r: 0.43529412, g: 0.24705882, b: 0.15294118, a: 0}
+    tintStrength: 0.3
+    startHeight: 0.278
+    blendStrength: 0.087
+    textureScale: 3.17
+  - texture: {fileID: 2800000, guid: 5866cbcf2cc37ff45a28d0dc03802158, type: 3}
+    tint: {r: 0.43529412, g: 0.24705882, b: 0.07058824, a: 0}
+    tintStrength: 0.3
+    startHeight: 0.331
+    blendStrength: 0.058
+    textureScale: 25.01
+  - texture: {fileID: 2800000, guid: 81b961aaf0e6bfb49ba8de5f2798ce2c, type: 3}
+    tint: {r: 1, g: 1, b: 1, a: 0}
+    tintStrength: 0.3
+    startHeight: 0.926
+    blendStrength: 0.14
+    textureScale: -8.33
