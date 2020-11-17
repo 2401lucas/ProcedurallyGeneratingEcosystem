@@ -22,8 +22,8 @@ public static class Noise
 
         for (int i = 0; i < settings.octaves; i++)
         {
-            float offsetX = psudoRand.Next(-100000, 100000) + settings.offset.x - sampleCenter.x;
-            float offsetY = psudoRand.Next(-100000, 100000) - settings.offset.y + sampleCenter.y;
+            float offsetX = psudoRand.Next(-100000, 100000) + settings.offset.x + sampleCenter.x;
+            float offsetY = psudoRand.Next(-100000, 100000) - settings.offset.y - sampleCenter.y;
             octavesOffsets[i] = new Vector2(offsetX, offsetY);
 
             maxPossibleHeight += amplitude;
@@ -48,7 +48,7 @@ public static class Noise
                     float sampleX = (x - halfWidth + octavesOffsets[i].x) / settings.scale * frequency; //By adding the octave offset it allows for scrolling
                     float sampleY = (y - halfHeight + octavesOffsets[i].y) / settings.scale * frequency;
 
-                    //Unity's Perlin noise usually returns a value between 0 - 1, by doing (* 2 - 1) it is then return a value between -1 & 1
+                    //Unity's Perlin noise usually returns a value between 0 - 1, by doing (* 2 - 1) it is then return a value between -1 & 1 creating more variability
                     float perlinValue = Mathf.PerlinNoise(sampleX, sampleY) * 2 - 1;
                     noiseHeight += perlinValue * amplitude;
 

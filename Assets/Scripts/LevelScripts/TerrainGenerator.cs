@@ -19,6 +19,7 @@ public class TerrainGenerator : MonoBehaviour
 
     Vector2 viewerPosition;
     Vector2 viewerPositionOld;
+
     float meshWorldSize;
     int chunksVisibleInViewDist;
 
@@ -60,6 +61,7 @@ public class TerrainGenerator : MonoBehaviour
     void UpdateVisibleChunks()
     {
         HashSet<Vector2> alreadyUpdatedChunkCoords = new HashSet<Vector2>();
+
         for (int i = visibleTerrainChunks.Count - 1; i >= 0; i--)
         {
             alreadyUpdatedChunkCoords.Add(visibleTerrainChunks[i].coord);
@@ -69,9 +71,9 @@ public class TerrainGenerator : MonoBehaviour
         int currentChunkCoordX = Mathf.RoundToInt(viewerPosition.x / meshWorldSize);
         int currentChunkCoordY = Mathf.RoundToInt(viewerPosition.y / meshWorldSize);
 
-        for (int yOffset = -chunksVisibleInViewDist; yOffset < chunksVisibleInViewDist; yOffset++)
+        for (int yOffset = -chunksVisibleInViewDist; yOffset <= chunksVisibleInViewDist; yOffset++)
         {
-            for (int xOffset = -chunksVisibleInViewDist; xOffset < chunksVisibleInViewDist; xOffset++)
+            for (int xOffset = -chunksVisibleInViewDist; xOffset <= chunksVisibleInViewDist; xOffset++)
             {
                 Vector2 viewedChunkCoord = new Vector2(currentChunkCoordX + xOffset, currentChunkCoordY + yOffset);
                 if (!alreadyUpdatedChunkCoords.Contains(viewedChunkCoord))

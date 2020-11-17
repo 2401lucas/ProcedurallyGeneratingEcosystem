@@ -13,19 +13,20 @@ public class MeshSettings : UpdatableData
     public float meshScale = 2.5f;
     public bool useFlatShading;
 
-    [Range(0, numSupportedChunkSizes)]
+    [Range(0, numSupportedChunkSizes - 1)]
     public int chunkSizeIndex;
 
-    [Range(0, numSupportedFlatShadedChunkSizes)]
+    [Range(0, numSupportedFlatShadedChunkSizes - 1)]
     public int flatShadedChunkSizeIndex;
 
-    //number of vertices used per line at LOD = 0. Includes 2 extra vertices that are excluded from final mesh but used for calculating normals
+    //number of vertices used per line at LOD = 0. Includes 2 extra vertices that are excluded from final mesh but used for calculating normals.
+    //When creating seamless chunks, 3 more vertices are needed to properly calculate it the edges of the chunks
     public int numberOfVerticesPerLine
     {
         get
         {
-            //Each mesh has a limit of 65000 vertices, with a chunk size of 240 when flat shading, we exceed that
-            return supportedChunkSizes[(useFlatShading) ? flatShadedChunkSizeIndex : chunkSizeIndex] + 1;
+            //Each mesh has a limit of 65000 vertices, with a chunk size greater then 96 when flat shading, we exceed that
+            return supportedChunkSizes[(useFlatShading) ? flatShadedChunkSizeIndex : chunkSizeIndex] + 5;
         }
     }
 

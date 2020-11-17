@@ -6,19 +6,16 @@ using UnityEngine;
 
 public class ThreadedDataRequester : MonoBehaviour
 {
-    public static ThreadedDataRequester instance;
+    public static ThreadedDataRequester Instance;
     Queue<ThreadInfo> dataQueue = new Queue<ThreadInfo>();
 
-    void Awake()
-    {
-        instance = FindObjectOfType<ThreadedDataRequester>();
-    }
+    void Awake() => Instance = FindObjectOfType<ThreadedDataRequester>();
 
-    public static void RequestData(Func<object> generateDataFunc, Action<object> callback)
+    public static void RequestData(Func<object> generateData, Action<object> callback)
     {
         ThreadStart threadStart = delegate
         {
-            instance.DataThread(generateDataFunc, callback);
+            Instance.DataThread(generateData, callback);
         };
 
         new Thread(threadStart).Start();
@@ -29,7 +26,7 @@ public class ThreadedDataRequester : MonoBehaviour
         object data = generateDataFunc();
         lock (dataQueue)
         {
-            dataQueue.Enqueue(new ThreadInfo(callback, generateDataFunc));
+            dataQueue.Enqueue(new ThreadInfo(callback, data));
         }
     }
 

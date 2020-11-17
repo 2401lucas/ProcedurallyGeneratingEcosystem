@@ -8,6 +8,7 @@ public class TerrainChunk
 
     public event System.Action<TerrainChunk, bool> onVisibilityChanged;
     public Vector2 coord;
+
     GameObject meshObject;
     Vector2 sampleCenter;
     Bounds bounds;
@@ -46,7 +47,6 @@ public class TerrainChunk
         Vector2 position = coord * meshSettings.meshWorldSize;
 
         bounds = new Bounds(sampleCenter, Vector2.one * meshSettings.meshWorldSize);
-        hasSetCollider = false;
 
         meshObject = new GameObject("Terrain Chunk");
         meshRenderer = meshObject.AddComponent<MeshRenderer>();
@@ -89,9 +89,10 @@ public class TerrainChunk
     {
         if (heightMapReceived)
         {
-            float viewDistFromNearestEdge = Mathf.Sqrt(bounds.SqrDistance(viewer.position));
-            bool visible = viewDistFromNearestEdge <= maxViewDist;
+            float viewDistFromNearestEdge = Mathf.Sqrt(bounds.SqrDistance(viewerPosition));
+
             bool wasVisible = IsVisible();
+            bool visible = viewDistFromNearestEdge <= maxViewDist;
 
             if (visible)
             {
@@ -124,7 +125,7 @@ public class TerrainChunk
             if (wasVisible != visible)
             {
                 SetVisible(visible);
-                if (onVisibilityChanged != null) onVisibilityChanged(this, visible);
+                onVisibilityChanged?.Invoke(this, visible);
             }
 
         }
@@ -182,6 +183,7 @@ class LODMesh
     {
         mesh = ((MeshData)meshDataObject).CreateMesh();
         hasMesh = true;
+
         updateCallback();
     }
     public void RequestMesh(HeightMap heightMap, MeshSettings meshSettings)
