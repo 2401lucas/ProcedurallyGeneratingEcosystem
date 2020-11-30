@@ -7,9 +7,11 @@ There is a Chunk of terrain that is created using Unity's Perlin noise algorithm
 
 To apply the texture to each chunk, it uses a shader that determins what texture should be applied based on the world position of each pixel.
 
-The picture shows many chunks being placed in the players rendering distance, as the player traverses towards the edge of the generated chunks, teh ones furthest away from the player are ungenerated and new ones are generated infront of the player to have a seeming endless landscape.
+The picture shows many chunks being placed in the players rendering distance, as the player traverses towards the edge of the generated chunks, the ones furthest away from the player are hidden and new ones are generated or shown infront of the player to have a seeming endless landscape.
 
 ![image](https://user-images.githubusercontent.com/32739337/99461091-789d0b80-2907-11eb-91eb-21bd00bf0ecd.png)
 
+![image](https://user-images.githubusercontent.com/32739337/100557763-8183ca80-3281-11eb-9bc4-1f8386a82349.png)
 
+## Seamless Chunk Borders
 
