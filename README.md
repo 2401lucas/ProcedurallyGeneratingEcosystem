@@ -23,7 +23,9 @@ This image has 2 different level of detail meshs pictured, the border of the chu
  This caused issues with the border each chunk not properly aligning  with a chunk with less verticies. It wasn't a big issue but sometimes in the distance it wouldn't look smooth and would break immersion. The solution to this was to create a high detail border so that each chunk, no matter the detail was using the same border quality, allowing for a smooth and seamless terrain.       
 ![image](https://user-images.githubusercontent.com/32739337/100557982-aaf12600-3282-11eb-83ec-dc7047e93cad.png)
 
-
+## FlatShading
+![image](https://user-images.githubusercontent.com/32739337/100622232-ffce8400-32f6-11eb-995c-4b10dde1daac.png)
+I have also implemented FlatShading, giving a lower poly look. 
 
 
 
