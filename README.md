@@ -11,7 +11,10 @@ The picture shows many chunks being placed in the players rendering distance, as
 
 ![image](https://user-images.githubusercontent.com/32739337/99461091-789d0b80-2907-11eb-91eb-21bd00bf0ecd.png)
 
-![image](https://user-images.githubusercontent.com/32739337/100557763-8183ca80-3281-11eb-9bc4-1f8386a82349.png)
 
 ## Seamless Chunk Borders
+Depending on the distance of each chunk the number of vertices can be lowered for better performance
+![image](https://user-images.githubusercontent.com/32739337/100557982-aaf12600-3282-11eb-83ec-dc7047e93cad.png)
 
+
+![image](https://user-images.githubusercontent.com/32739337/100557763-8183ca80-3281-11eb-9bc4-1f8386a82349.png)
