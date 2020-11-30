@@ -13,7 +13,7 @@ The picture shows many chunks being placed in the players rendering distance, as
 
 
 ## Seamless Chunk Borders
-Depending on the distance of each chunk the number of vertices can be lowered for better performance
+Depending on the distance of each chunk the number of vertices can be lowered for better performance. This caused issues with the border of the terrain mesh not aligning with  
 ![image](https://user-images.githubusercontent.com/32739337/100557982-aaf12600-3282-11eb-83ec-dc7047e93cad.png)
 
 
