@@ -1,6 +1,7 @@
 ![image](https://user-images.githubusercontent.com/32739337/100557612-b5aabb80-3280-11eb-8201-1706ba5f9f4d.png)
 # Endless Procedural Ecosystem
-This Project is an endlessly generating procedural landscape with mountains, trees, grass, water and animals. 
+This Project is an endlessly generating procedural landscape. 
+Biomes are currently in the works. 
 
 ## The Terrain Generation
 There is a Chunk of terrain that is created using Unity's Perlin noise algorithm to generate random values between 0-1, then a height curve is applied to create flat water and steep hills. 
