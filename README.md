@@ -30,8 +30,9 @@ This image has 2 different level of detail meshs pictured, the border of the chu
 ![image](https://user-images.githubusercontent.com/32739337/100557982-aaf12600-3282-11eb-83ec-dc7047e93cad.png)
 
 ## FlatShading
-![image](https://user-images.githubusercontent.com/32739337/100622232-ffce8400-32f6-11eb-995c-4b10dde1daac.png)
 I have also implemented FlatShading, giving a lower poly look. 
+![image](https://user-images.githubusercontent.com/32739337/100622232-ffce8400-32f6-11eb-995c-4b10dde1daac.png)
+
 
 ## Textures
 Textures are applied using a pixel shader, it gets the heigh of the pixel, and based off of that, it applies the texture. I learned about triplanar mapping to smoothly apply textures over the terrain. 
