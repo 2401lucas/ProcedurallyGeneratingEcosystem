@@ -35,15 +35,16 @@ I have also implemented FlatShading, giving a lower poly look.
 
 ## Textures
 Textures are applied using a pixel shader, it gets the heigh of the pixel, and based off of that, it applies the texture. I learned about triplanar mapping to smoothly apply textures over the terrain. 
-Without Triplanar
+### Without Triplanar
 ![image](https://user-images.githubusercontent.com/32739337/102144728-60ec7080-3e3c-11eb-8589-011861e3d3b1.png)
 
-With Triplanar
+### With Triplanar
 ![image](https://user-images.githubusercontent.com/32739337/102144377-c2600f80-3e3b-11eb-91f8-7f43d3fdefb5.png)
 
-I also Used Texture Blending near the edges to jagged changes between textures. 
-This is without the blending.
+### I also Used Texture Blending near the edges to jagged changes between textures. 
+
+### This is without the blending.
 ![image](https://user-images.githubusercontent.com/32739337/102143911-07377680-3e3b-11eb-997a-40b25f46ccf6.png)
 
-With Texture Blending
+### With Texture Blending
 ![image](https://user-images.githubusercontent.com/32739337/102144266-93e23480-3e3b-11eb-9850-6aa5ca965895.png)
